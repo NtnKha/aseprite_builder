@@ -6,7 +6,12 @@ on:
   push:
     branches:
       - master
-
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Run?'
+        required: true
+        default: 'YES!'  
 env:
   BUILD_TYPE: Release
   
